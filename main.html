@@ -1,56 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <link rel="stylesheet" href="../Calculator/styles.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/a22541818d.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <style>
-            
-            .tab{
-                width: 30%;
-                margin-left: 50px;
-                background-color: black;
-            }
-            .clac{
-                width: 30%;
-                margin-left: 50px;
-                height: 100px;
-                background-color: black;
-                color: white;
-                text-align: right;
-                font-size: 20px;
-                border: 0px;
-            }
-            button{
-                background-color: black;
-                color: white;
-            }
-            thead button{
-              color: coral;
-            }
-            tbody tr th:last-child button{
-                color: coral;
-            }
-            #history{
-                color: coral;
-            }
-            
-        </style>
         
-        <div>
+        <div class="row">
+          
+          <div class="col col-lg-3 col-md-3 col-sm-3">
+            <h2 style="margin-left: 50px;">CALCULATOR</h2>
+          
             <input type="text" class="clac" id="calstr" placeholder="0">
 
             <table class="tab">
-                
+               
                 <thead>
                   <tr>
-                    <th ><button class="btn" onclick="calstr.value=0" ondblclick="clea();">AC</button></th>
+                    <th ><button class="btn" onclick="calstr.value=''" ondblclick="clea();">AC</button></th>
                     <th ><button class="btn" onclick="backspace(calstr.value);"><i class="fas fa-backspace"></i></button></th>
                     <th ><button class="btn" onclick="power(calstr.value);"><i class="fas fa-superscript"></i></button></th>
                     <th ><button class="btn" onclick="add('/')"><i class="fas fa-divide"></i></button></th>
-                    <th rowspan="4" id="history"> HISTORY <ol id="list"> </ol></th>
+                    
 
             
                   </tr>
@@ -82,6 +55,12 @@
                   </tr>
                 </tbody>
               </table>
+          </div>
+          <div class="col col-lg-3 col-md-3 col-sm-3" class="hi">
+            <table>
+              <th rowspan="4" id="history"> <h1>HISTORY</h1> <ol id="list"> </ol></th>
+            </table>
+          </div>
 
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

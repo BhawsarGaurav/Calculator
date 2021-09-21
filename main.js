@@ -35,7 +35,7 @@ function operation(value){
     calstr.value=result;
   addingListInHistory(value,result);
 }
- // function to delete  the history list
+ // function to delete  the history list , Double click on AC to delete history
 function clea(){
     list.innerHTML="";
    
